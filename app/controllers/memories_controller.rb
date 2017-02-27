@@ -9,6 +9,7 @@ class MemoriesController < ApplicationController
   end
 
   def new
+    @user = current_user
     @memory = Memory.new
   end
 
@@ -21,6 +22,6 @@ class MemoriesController < ApplicationController
 
   private
   def memory_params
-    params.require(:memories).permit(:narrative)
+    params.require(:memory).permit(:narrative)
   end
 end

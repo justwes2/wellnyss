@@ -2,7 +2,19 @@
 <h2>Welcome!</h2>
 <div class='column'>
   <h3>Your good memories</h3>
-  
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Narrative</th>
+    </tr>
+    <% current_user.memories.each do |memory| %>
+      <tr>
+        <td><%= memory.created_at.time.to_date %> </td>
+        <td><%= memory.narrative %> </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= link_to 'New memory', new_user_memory_path(@user) %>
 </div>
 <div class='column'>
   <h3>Your self-assessment history</h3>
@@ -33,4 +45,5 @@
   </p>
   <% end %>
 <% end %>
+<%= link_to 'New assessment', new_user_assessment_path(@user) %>
 </div>

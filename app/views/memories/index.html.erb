@@ -1,1 +1,13 @@
 <h2> Remember when </h2>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Narrative</th>
+  </tr>
+  <% current_user.memories.each do |memory| %>
+    <tr>
+      <td><%= memory.created_at.time.to_date %> </td>
+      <td><%= memory.narrative %> </td>
+    </tr>
+  <% end %>
+</table>
