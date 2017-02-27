@@ -27,16 +27,14 @@ class GoalsController < ApplicationController
 
   def update
     @goal = Goal.find(params[:id])
-    if @goal.update(goal_params)
-      redirect_to @goal
-    else
-      render 'edit'
-    end
+    @goal.update(goal_params)
+    redirect_to @goal
   end
 
   def destroy
     @goal = Goal.find(params[:id])
     @goal.destroy
+    redirect_to user_goals_path
   end
 
   private
