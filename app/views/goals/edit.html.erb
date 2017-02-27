@@ -1,5 +1,5 @@
 <h3>Edit goal</h3>
-<%= form_for([current_user, @user.goals.build]) do |f| %>
+<%= form_for [@user, @goal], method: :put do |f| %>
   <p>
     <%= f.label :goal_string %><br>
 
