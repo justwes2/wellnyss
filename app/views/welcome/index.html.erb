@@ -1,4 +1,6 @@
 
+
+<% if @last_assessment == Date.current %>
 <h2>Welcome!</h2>
 <div class='column'>
   <h3>Your good memories</h3>
@@ -8,44 +10,30 @@
       <th>Narrative</th>
     </tr>
     <% current_user.memories.each do |memory| %>
-      <tr>
-        <td><%= memory.created_at.time.to_date %> </td>
-        <td><%= memory.narrative %> </td>
-      </tr>
+    <tr>
+      <td><%= memory.created_at.time.to_date %> </td>
+      <td><%= memory.narrative %> </td>
+    </tr>
     <% end %>
   </table>
   <%= link_to 'New memory', new_user_memory_path(@user) %>
 </div>
 <div class='column'>
   <h3>Your self-assessment history</h3>
-<% if @last_assesment == Date.current %>
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Score</th>
-  </tr>
-  <% current_user.assessments.each do |assessment| %>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Score</th>
+    </tr>
+    <% current_user.assessments.each do |assessment| %>
     <tr>
       <td><%= assessment.created_at.time.to_date %> </td>
       <td><%= assessment.score %> </td>
     </tr>
-  <% end %>
-</table>
+    <% end %>
+  </table>
 
-<% else %>
-
-<%= form_for([current_user, @user.assessments.build]) do |f| %>
-  <p>
-    <%= f.label :score %><br>
-
-    <%= f.select :score, (1..10) %><br>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-  <% end %>
-<% end %>
-<%= link_to 'New assessment', new_user_assessment_path(@user) %>
+  <%= link_to 'New assessment', new_user_assessment_path(@user) %>
 </div>
 <div class="column">
   <h3>Your Goals</h3>
@@ -55,13 +43,26 @@
       <th>Goal</th>
     </tr>
     <% current_user.goals.each do |goal| %>
-      <tr>
-        <td><%= goal.created_at.time.to_date %> </td>
-        <td><%= goal.goal_string %> </td>
-        <td><%= link_to 'Edit', edit_user_goal_path(current_user, goal) %> </td>
-        <td><%= link_to 'Completed/Remove', user_goal_path(current_user, goal), method: :delete, data: {confirm: 'Do you want to remove this goal?'} %> </td>
-      </tr>
+    <tr>
+      <td><%= goal.created_at.time.to_date %> </td>
+      <td><%= goal.goal_string %> </td>
+      <td><%= link_to 'Edit', edit_user_goal_path(current_user, goal) %> </td>
+      <td><%= link_to 'Completed/Remove', user_goal_path(current_user, goal), method: :delete, data: {confirm: 'Do you want to remove this goal?'} %> </td>
+    </tr>
     <% end %>
   </table>
   <%= link_to 'New goal', new_user_goal_path(@user) %>
 </div>
+<% else %>
+
+<%= form_for([current_user, @user.assessments.build]) do |f| %>
+<p>
+  <%= f.label :score %><br>
+
+  <%= f.select :score, (1..10) %><br>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+<% end %>
