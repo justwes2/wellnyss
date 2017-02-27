@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  narrative: MyString
+  user: one
+
+two:
+  narrative: MyString
+  user: two
