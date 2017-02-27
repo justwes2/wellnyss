@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :assessments
     resources :memories
+    resources :goals
   end
 
   root to: 'welcome#index'

@@ -1,0 +1,15 @@
+<h3>Goals</h3>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Goal</th>
+  </tr>
+  <% current_user.goals.each do |goal| %>
+    <tr>
+      <td><%= goal.created_at.time.to_date %> </td>
+      <td><%= goal.goal_string %> </td>
+      <td><%= link_to 'Edit', edit_user_goal_path(@user, goal) %> </td>
+      <td><%= link_to 'Completed/Remove', goal_path(goal), method: :delete, data: {confirm: 'Do you want to remove this goal?'} %> </td>
+    </tr>
+  <% end %>
+</table>
