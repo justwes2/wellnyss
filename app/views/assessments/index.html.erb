@@ -1,0 +1,13 @@
+<h2>Assessments</h2>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Score</th>
+  </tr>
+  <% current_user.assessments.each do |assessment| %>
+    <tr>
+      <td><%= assessment.created_at.time.to_date %> </td>
+      <td><%= assessment.score %> </td>
+    </tr>
+  <% end %>
+</table>

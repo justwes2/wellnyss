@@ -1,7 +1,7 @@
 class AssessmentsController < ApplicationController
 
   def index
-    @assessments = Assessment.find(params[:user_id])
+    @assessments = Assessment.all
   end
 
   def show
@@ -13,9 +13,10 @@ class AssessmentsController < ApplicationController
   end
 
   def create
-    @assessment= Assessment.new
+    @assessment= Assessment.new(assessment_params)
+    @assessment.user = current_user
     @assessment.save
-    redirect_to user_assessments
+    redirect_to user_assessments_url
   end
 
   private
