@@ -1,4 +1,10 @@
 <h3>Goals</h3>
+<div class="row">
+<div class="well column col-md-6">
+  <p>Setting goals is an important part of building sustainable wellness. Focus on changes you can make, and be as specific as possible. "I want to lose weight" is a noble sentiment, but as a goal, it doesn't do much to guide changes in behavior. "I will eat better and exercise to lose weight" is better. It says what you will do, and ties your behavioral changes to your goal. "I will eat less sugary snacks" or "I will walk/run at least fifteen minutes three times a week" are great. Theu define specific, measurable changes that are entirely within your control. </p>
+  <!-- <p> </p> -->
+</div>
+<div class="well column col-md-6">
 <table>
   <tr>
     <th>Date</th>
@@ -13,3 +19,7 @@
     </tr>
   <% end %>
 </table>
+<%= link_to 'Create New Goal', new_user_goal_path(current_user) %><br>
+</div>
+</div>
+<button><%= link_to 'Back', root_url %></button>

@@ -1,9 +1,11 @@
-<h2> Remember when </h2>
+<h2> Remember when... </h2>
+<div class="row">
+  <div class="well column col-md-6">
 <table>
-  <tr>
+  <!-- <tr>
     <th>Date</th>
     <th>Narrative</th>
-  </tr>
+  </tr> -->
   <% current_user.memories.each do |memory| %>
     <tr>
       <td><%= memory.created_at.time.to_date %> </td>
@@ -11,3 +13,63 @@
     </tr>
   <% end %>
 </table>
+<%= link_to 'Add New Memory', new_user_memory_path(current_user) %><br>
+</div>
+<div class="well column col-md-6">
+  <p>If you're stuck, try answering these questions:</p>
+  <article>
+    <p class="strong">Are you hydrated?</p>
+    <p> If not, have a glass of water.</p>
+  </article>
+  <article>
+    <p class="strong">Have you eaten in the past three hours?</p>
+    <p>If not, get some food — something with protein, not just simple carbs.  Perhaps some nuts or hummus?</p>
+  </article>
+  <article>
+    <p class="strong">Have you showered in the past day?</p>
+    <p>If not, take a shower right now.</p>
+  </article>
+  <article>
+    <p class="strong">If daytime: are you dressed? </p>
+    <p> If not, put on clean clothes that aren’t pajamas.  Give yourself permission to wear something special, whether it’s a funny t-shirt or a pretty dress.</p>
+  </article>
+  <article>
+    <p class="strong">If nighttime: are you sleepy and fatigued but resisting going to sleep?</p>
+    <p>Put on pajamas, make yourself cozy in bed with a teddy bear and the sound of falling rain, and close your eyes for fifteen minutes — no electronic screens allowed.  If you’re still awake after that, you can get up again; no pressure.</p>
+  </article>
+  <article>
+    <p class="strong">Have you stretched your legs in the past day? </p>
+    <p>If not, do so right now.  If you don’t have the spoons for a run or trip to the gym, just walk around the block, then keep walking as long as you please.  If the weather’s crap, drive to a big box store (e.g. Target) and go on a brisk walk through the aisles you normally skip.</p>
+  </article>
+  <article>
+    <p class="strong">Have you said something nice to someone in the past day? </p>
+    <p>Do so, whether online or in person.  Make it genuine; wait until you see something really wonderful about someone, and tell them about it.</p>
+  </article>
+  <article>
+    <p class="strong">Have you moved your body to music in the past day?</p>
+    <p> If not, do so — jog for the length of an EDM song at your favorite BPM, or just dance around the room for the length of an upbeat song.</p>
+  </article>
+  <article>
+    <p class="strong">Have you cuddled a living being in the past two days?</p>
+    <p> If not, do so.  Don’t be afraid to ask for hugs from friends or friends’ pets.  Most of them will enjoy the cuddles too; you’re not imposing on them.</p>
+  </article>
+  <article>
+    <p class="strong">Do you feel ineffective?</p>
+    <p>Pause right now and get something small completed, whether it’s responding to an e-mail, loading up the dishwasher, or packing your gym bag for your next trip.  Good job!</p>
+  </article>
+  <article>
+    <p class="strong">Do you feel unattractive? </p>
+    <p> Take a selfie.  Your friends will remind you how great you look, and you’ll fight society’s restrictions on what beauty can look like.</p>
+  </article>
+  <article>
+    <p class="strong">Do you feel paralyzed by indecision?</p>
+    <p>Give yourself ten minutes to sit back and figure out a game plan for the day.  If a particular decision or problem is still being a roadblock, simply set it aside for now, and pick something else that seems doable.  Right now, the important part is to break through that stasis, even if it means doing something trivial.</p>
+  </article>
+  <article>
+    <p class="strong">Have you been over-exerting yourself lately — physically, emotionally, socially, or intellectually?</p>
+    <p>That can take a toll that lingers for days. Give yourself a break in that area, whether it’s physical rest, taking time alone, or relaxing with some silly entertainment.</p>
+  </article>
+  <a href="http://eponis.tumblr.com/post/113798088670/everything-is-awful-and-im-not-okay-questions-to">Source</a>
+</div>
+</div>
+<%= link_to 'Back', root_url %>

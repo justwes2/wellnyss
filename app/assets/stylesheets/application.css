@@ -33,7 +33,7 @@ nav {
   text-align: right;
 }
 .brand {
-  font-family: 'Knewave', cursive;
+  font-family: 'Indie Flower', cursive;
   color: rgb(180, 204, 201);
   font-size: 2em;
 }
@@ -41,7 +41,7 @@ nav {
     color: rgb(180, 204, 201);
 }
 .tagline {
-  font-family: 'Knewave', cursive;
+  font-family: 'Indie Flower', cursive;
   color: rgb(180, 204, 201);
 }
 table, td, th,tr {
@@ -49,3 +49,7 @@ table, td, th,tr {
   text-align: center;
   border-spacing: 2px;
   border: 2px solid rgb(211, 200, 189);
+}
+.strong {
+  font-style: italic;
+}
