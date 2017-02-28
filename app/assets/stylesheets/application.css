@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: rgb(211, 200, 189);
+  font-family: 'Raleway', sans-serif;
+}
+a {
+
+  color: black;
+}
+.column {
+  background-color: rgba(180, 204, 201, .9);
+  border: 15px solid rgb(211, 200, 189);
+}
+.banner {
+  background-color: rgba(163, 180, 140, .9);
+  text-align: center;
+}
+nav {
+  text-align: right;
+}
+.brand {
+  font-family: 'Knewave', cursive;
+  color: rgb(180, 204, 201);
+  font-size: 2em;
+}
+.brand > a {
+    color: rgb(180, 204, 201);
+}
+.tagline {
+  font-family: 'Knewave', cursive;
+  color: rgb(180, 204, 201);
+}
+table, td, th,tr {
+  background-color: rgba(180, 204, 201, 1);
+  text-align: center;
+  border-spacing: 2px;
+  border: 2px solid rgb(211, 200, 189);
