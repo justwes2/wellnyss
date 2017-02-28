@@ -17,18 +17,18 @@ class AssessmentsController < ApplicationController
     @assessment= Assessment.new(assessment_params)
     @assessment.user = current_user
     @assessment.save
-    # redirect_to user_assessments_url
+
     if @assessment.score == 1
       redirect_to crisis_path
     elsif @assessment.score == 2
       redirect_to user_memories_path
-      flash[:notice] = ""
+      flash[:notice] = "It sounds like you're feeling down right now. Here are some positive memories to remind you that it can't rain all the time."
     elsif @assessment.score == 3
       redirect_to user_memories_path
-      flash[:notice] = ""
+      flash[:notice] = "It sounds like you're feeling down right now. Here are some positive memories to remind you that it can't rain all the time."
     elsif @assessment.score == 4
       redirect_to user_memories_path
-      flash[:notice] = ""
+      flash[:notice] = "It sounds like you're feeling down right now. Here are some positive memories to remind you that it can't rain all the time."
     elsif @assessment.score == 5
       redirect_to user_goals_path
       flash[:notice] = "Ok. What would it take to get you to a 6?"

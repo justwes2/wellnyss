@@ -14,41 +14,44 @@
  *= require_self
  */
 body {
-  background-color: rgb(211, 200, 189);
+  background-color: rgb(176, 180, 140);
   font-family: 'Raleway', sans-serif;
+  color: black;
 }
 a {
 
   color: black;
 }
 .column {
-  background-color: rgba(180, 204, 201, .9);
-  border: 15px solid rgb(211, 200, 189);
+  background-color: rgba(35, 123, 178, 1);
+  border: 15px solid rgb(176, 180, 140);
+}
+table, td, th,tr {
+  /*background-color: rgba(38, 91, 255, .1);*/
+  padding: 4px;
+  text-align: center;
+  border-spacing: 2px;
+  border: 2px solid rgb(129, 133, 115);
 }
 .banner {
-  background-color: rgba(163, 180, 140, .9);
+  background-color: rgba(114, 153, 61, .9);
   text-align: center;
+  border: 0;
 }
 nav {
   text-align: right;
 }
 .brand {
   font-family: 'Indie Flower', cursive;
-  color: rgb(180, 204, 201);
+  color: rgb(255, 255, 210);
   font-size: 2em;
 }
 .brand > a {
-    color: rgb(180, 204, 201);
+    color: rgb(255, 255, 210);
 }
 .tagline {
   font-family: 'Indie Flower', cursive;
-  color: rgb(180, 204, 201);
-}
-table, td, th,tr {
-  background-color: rgba(180, 204, 201, 1);
-  text-align: center;
-  border-spacing: 2px;
-  border: 2px solid rgb(211, 200, 189);
+  color: rgb(255, 255, 210);
 }
 .strong {
   font-style: italic;
