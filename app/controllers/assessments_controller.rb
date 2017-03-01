@@ -1,7 +1,7 @@
 class AssessmentsController < ApplicationController
 
   def index
-    @assessments = Assessment.all
+    @assessments = Assessment.all.order(updated_at: :desc)
   end
 
   def show

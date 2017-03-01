@@ -27,7 +27,7 @@
       <th>Date</th>
       <th>Score</th>
     </tr>
-    <% current_user.assessments.each do |assessment| %>
+    <% current_user.assessments.order(updated_at: :desc).each do |assessment| %>
     <tr>
       <td><%= assessment.created_at.time.to_date %> </td>
       <td><%= assessment.score %> </td>
@@ -38,7 +38,7 @@
   <%= link_to 'New assessment', new_user_assessment_path(@user) %>
 </div>
 <div class="well column col-md-4">
-  <h3><%= link_to'Your Goals', user_goals_path(@user)%><%= link_to '(+)', new_user_goal_path(@user) %></h3>
+  <h3><%= link_to'Your goals', user_goals_path(@user)%><%= link_to '(+)', new_user_goal_path(@user) %></h3>
   <table>
     <tr>
       <th>Date</th>

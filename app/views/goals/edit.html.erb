@@ -2,8 +2,9 @@
 <%= form_for [@user, @goal], method: :put do |f| %>
   <p>
     <%= f.label :goal_string %><br>
-
-    <%= f.text_area :goal_string %><br>
+    <div class="textbox">
+      <%= f.text_area :goal_string %><br>
+    </div>
   </p>
   <p>
     <%= f.submit %>
