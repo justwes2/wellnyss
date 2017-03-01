@@ -27,7 +27,7 @@ a {
   border: 15px solid rgb(176, 180, 140);
 }
 table, td, th,tr {
-  /*background-color: rgba(38, 91, 255, .1);*/
+
   padding: 4px;
   text-align: center;
   border-spacing: 2px;
@@ -61,4 +61,10 @@ nav {
   width: 50%;
   max-height: 20%;
   max-width: 50%;
+}
+.flexcont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
