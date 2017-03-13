@@ -9,6 +9,7 @@ class GoalsController < ApplicationController
   end
 
   def edit
+    # AM: Can't you just reference `current_user` in your view instead of saving it to a `@user` variable?
     @user = current_user
     @goal = Goal.find(params[:id])
   end

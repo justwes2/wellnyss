@@ -1,4 +1,5 @@
 <h3>Edit goal</h3>
+<!-- AM: You shouldn't need to explicitly say `method: :put` if `@goal` contains an existing goal. -->
 <%= form_for [@user, @goal], method: :put do |f| %>
   <p>
     <%= f.label :goal_string %><br>
