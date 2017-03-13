@@ -1,3 +1,6 @@
+<!-- AM: +1 informative readme -->
+<!-- AM: Encourage you to look more into Markdown formatting -->
+
 # README
 
 WDI Project 2: CRUD on Rails
@@ -25,4 +28,4 @@ This is a web app hosted on heroku. It can be found at https://wellnyss.herokuap
 unsolved problems
 There are no major outstanding bugs known at this time. In future versions of this app, the goals model should be improved to treat the deadlines as a date rather than a string, so that the app can provide more support in maintaining and achieving these deadlines.
 Additionally, future versions of this app should display assessment history as a graph. There are some useful looking javascript plugins that create dynamic graphs so that users can see their progress over time, as well as sorting by weekday, season, time of assessment, and other variables.
-Finally, to be truly effective as a gateway to wellness as a paradigm for users, the app will need some sort of out of app reminder function, whether as an email reminder if a user has not checked in in several days, or as a mobile app, or even as a chrome extension, to engage users in daily, low intensity use. 
+Finally, to be truly effective as a gateway to wellness as a paradigm for users, the app will need some sort of out of app reminder function, whether as an email reminder if a user has not checked in in several days, or as a mobile app, or even as a chrome extension, to engage users in daily, low intensity use.

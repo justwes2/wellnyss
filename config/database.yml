@@ -2,8 +2,10 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: wescoffay
-  password:
+  # AM: FYI I was unable to create the database because of the below username/password.
+  # AM: If you're going to keep this, you should indicate in your project documentation that the user needs to use the proper username/password here.
+  # username: wescoffay
+  # password:
   timeout: 5000
 
 development:
